@@ -2,9 +2,19 @@
 #include <stdlib.h>
 static int sizeOfArray;
 int *array;
+/*
+*
+*@return void
+*@parameters int element,int position
+*/
 void addElement(int element,int position){
 	array[position]=element;
 }
+/*
+*
+*@return void
+*@parameters int position of removing element
+*/
 void removeElement(int position){
 	int i;
 	if(sizeOfArray!=0){
@@ -20,12 +30,6 @@ void removeElement(int position){
 	}
 	
 }
-void removeLastElement(int position){
-	
-}
-void removeFirstElement(int position){
-	
-}
 void printArray(){
 	int i;
 	for(i=0;i<sizeOfArray;i++){
@@ -37,8 +41,8 @@ int main(){
 	sizeOfArray=50;
 	array=malloc(sizeof(int)*sizeOfArray);
 	addElement(88,0);
-	printArray();
-	removeElement(0);
+	//removeElement(0);
+	//must find the way which is assigning null in removing element
 	printArray();
 	free(array);//for garbage collection
 	return 0;
